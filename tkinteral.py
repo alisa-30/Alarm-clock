@@ -5,7 +5,7 @@ root.configure(bg="blue")
 root.title("ALARM CLOCK-12Hr clock")
 C = Canvas(root,height=10,width=10)
 root.resizable(False,False)
-filename = ImageTk.PhotoImage(Image.open(r'A:\alarmpic.jpg'))
+filename = ImageTk.PhotoImage(Image.open(r'alarmpic.jpg'))
 background_label = Label(root,image=filename )
 background_label.place(x=0, y=0, relwidth=1, relheight=1)
 C.grid()
@@ -54,7 +54,7 @@ def alarmclock(alarm_time):
             current_sec = now.strftime("%S")
             current_period = now.strftime("%p")
             if alarm_sec == current_sec and alarm_period == current_period and alarm_hour == current_hour and alarm_min == current_min :
-                playsound('C:/Users/DOLA BANERJEE/Downloads/alarm.wav')
+                playsound('alarm.wav')
                 from tkinter import messagebox
                 messagebox.showinfo("INFO", "WAKE UP")
                 root.destroy()
